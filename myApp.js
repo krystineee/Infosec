@@ -9,6 +9,7 @@ app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
 app.use(helmet.hsts({ maxAge: 7776000 }));
 app.use(helmet.dnsPrefetchControl());
+app.use(helmet.noCache());
 
 
 
