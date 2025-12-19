@@ -8,7 +8,6 @@ var app = express();
 app.disable("x-powered-by");
 var fs = require("fs");
 var path = require("path");
-var bcrypt = require("bcrypt");
 
 app.use(function (req, res, next) {
   res.set({
@@ -65,6 +64,8 @@ app.get("/package.json", function (req, res, next) {
 app.use(function (req, res, next) {
   res.status(404).type("txt").send("Not Found");
 });
+
+const bcrypt = require('bcrypt');
 
 module.exports = app;
 
